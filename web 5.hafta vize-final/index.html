@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Hesaplayıcı | JS Ödevi</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; margin: 0; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #0984e3; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #0975ca; }
+        #sonuc { margin-top: 20px; font-weight: bold; font-size: 1.2rem; }
+        .gecer { color: #27ae60; } /* Yeşil */
+        .kalar { color: #d63031; } /* Kırmızı */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Not Hesapla</h2>
+        <input type="number" id="vizeNotu" placeholder="Vize Notu (0-100)">
+        <input type="number" id="finalNotu" placeholder="Final Notu (0-100)">
+        <button onclick="hesapla()">Hesapla</button>
+        <div id="sonuc"></div>
+    </div>
+
+    <script>
+        function hesapla() {
+            // 1. Inputlardaki değerleri al (Sayıya çevirmeyi unutma!)
+            let vize = Number(document.getElementById('vizeNotu').value);
+            let final = Number(document.getElementById('finalNotu').value);
+            let sonucDiv = document.getElementById('sonuc');
+
+            // 2. Formülü uygula
+            let ortalama = (vize * 0.4) + (final * 0.6);
+
+            // 3. Karar Yapısı (If/Else)
+            if (ortalama >= 50) {
+                sonucDiv.innerText = "GEÇTİ - Notunuz: " + ortalama.toFixed(2);
+                sonucDiv.className = "gecer"; // CSS'teki yeşil rengi ekler
+            } else {
+                sonucDiv.innerText = "KALDI - Notunuz: " + ortalama.toFixed(2);
+                sonucDiv.className = "kalar"; // CSS'teki kırmızı rengi ekler
+            }
+            
+            // Konsola da yazdıralım (Hata ayıklama alışkanlığı)
+            console.log("Hesaplama Yapıldı. Ortalama: " + ortalama);
+        }
+    </script>
+
+</body>
+</html>
