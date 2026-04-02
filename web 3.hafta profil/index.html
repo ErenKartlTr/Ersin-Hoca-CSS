@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kartı | Ödev 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Sayfa Arka Planı (Linear Gradient) */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* 2. Profil Kartı (Kutu Modeli & Yerleşim) */
+        .profile-card {
+            background-color: white;
+            width: 320px;
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        /* 3. Yuvarlak Profil Resmi */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Tam yuvarlak yapar */
+            object-fit: cover;
+            border: 5px solid #764ba2; /* Kalın ve renkli border */
+            margin-bottom: 15px;
+        }
+
+        /* 4. Tipografi */
+        h2 {
+            margin: 10px 0 5px 0;
+            color: #2d3436;
+            font-weight: 600; /* Kalın ve belirgin */
+        }
+
+        .title {
+            margin: 0;
+            color: #636e72; /* İnce ve gri tonlarda unvan */
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        /* 5. Sosyal Medya Butonları */
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #764ba2;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease; /* Yumuşak geçiş için */
+        }
+
+        /* 6. Hover Etkileşimi */
+        .btn:hover {
+            background-color: #667eea;
+            transform: translateY(-5px); /* Hafifçe yukarı kalkma */
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="eren.jpeg" alt="Profil Resmi" class="profile-img">
+        
+        <h2>Eren Kartal</h2>
+        <p class="title">Full Stack Web Developer</p>
+        
+        <p style="font-size: 0.85rem; color: #b2bec3; margin-top: 15px;">
+            Kod yazmayı, kahveyi ve yeni teknolojileri keşfetmeyi seviyorum.
+        </p>
+
+        <div class="social-links">
+            <a href="#" class="btn">LinkedIn</a>
+            <a href="https://github.com/ErenKartlTr" class="btn">GitHub</a>
+            <a href="https://www.instagram.com/eren_krtll" class="btn">İnstagram</a>
+        </div>
+    </div>
+
+</body>
+</html>
