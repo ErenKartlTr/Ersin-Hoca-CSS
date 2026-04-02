@@ -1,0 +1,51 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.4s, color 0.4s; /* Yumuşak geçiş efektli */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Karanlık Mod Özellikleri */
+body.dark-theme {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Buton Tasarımı */
+#tema-btn {
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 2px solid #3b82f6;
+    background: transparent;
+    color: #3b82f6;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+#tema-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.content {
+    text-align: center;
+    max-width: 500px;
+}
