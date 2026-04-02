@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ErenCrypto | Fiyat Takipçisi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-chart-line"></i> Kripto Takip</h1>
+            <p id="status">Veriler güncel</p>
+        </header>
+
+        <main id="crypto-list">
+            <!-- JavaScript burayı dolduracak -->
+            <div class="loading">Veriler yükleniyor...</div>
+        </main>
+
+        <button onclick="fiyatlariGetir()" id="refresh-btn">
+            <i class="fa-solid fa-arrows-rotate"></i> Fiyatları Güncelle
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
