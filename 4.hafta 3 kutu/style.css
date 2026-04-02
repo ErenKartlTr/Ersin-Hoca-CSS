@@ -1,0 +1,103 @@
+/* 1. RENK VE GENEL AYARLAR */
+:root {
+    --ana-renk: #000000;
+    --vurgu-renk: #000000;
+    --arka-plan: #000000;
+    --beyaz: #00ff04;
+}
+
+
+/* Sayfayı genel olarak düzenle */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: sans-serif;
+}
+
+/* Her şeyi içine alan ana kutu */
+.main-wrapper {
+    display: flex;
+    flex-direction: column; /* İçindekileri (Başlık ve Kartlar) ALT ALTA dizer */
+    align-items: center;    /* Yatayda her şeyi tam ORTALAR */
+    width: 100%;
+    padding: 50px 0;        /* Üstten ve alttan boşluk */
+}
+
+/* Başlık Ayarı */
+.ana-baslik {
+    font-size: 2.5rem;
+    color: #00ff00;
+    margin-bottom: 60px;    /* Kartlarla arasını açar */
+    text-align: center;
+}
+
+/* Kartların yan yana dizildiği alan */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;        /* Mobilde kartları alt alta kaydırır */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Mobilde başlık biraz küçülsün */
+@media (max-width: 768px) {
+    .ana-baslik {
+        font-size: 1.8rem;
+        padding: 0 20px;
+    }
+}
+
+/* 3. TEK BİR KARTIN TASARIMI */
+.pricing-card {
+    background: var(--beyaz);
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1; /* Kartlar eşit genişlikte olur */
+    min-width: 280px; /* Kartın en küçük olabileceği genişlik */
+    max-width: 350px; /* Kartın çok fazla yayılmasını engeller */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    transition: 0.3s; /* Hareketleri yumuşatır */
+}
+
+/* Kartın üzerine gelince büyüme efekti */
+.pricing-card:hover {
+    transform: translateY(-20px);
+}
+
+/* 4. ÖNE ÇIKAN (ORTA) KART */
+.featured {
+    border: 3px solid var(--vurgu-renk);
+    transform: scale(1.05);
+}
+
+/* 5. BUTON TASARIMI */
+.btn {
+    display: block;
+    background: var(--ana-renk);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* 6. MOBİL UYUMLULUK (BURASI ÇOK ÖNEMLİ) */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column; /* Kartları yan yana değil, alt alta diz */
+        align-items: center;
+    }
+
+    .featured {
+        transform: scale(1); /* Mobilde orta kartın büyük olması görüntüyü bozabilir */
+    }
+
+    .pricing-card {
+        width: 90%; /* Mobilde kartlar ekranın %90'ını kaplasın */
+    }
+}
